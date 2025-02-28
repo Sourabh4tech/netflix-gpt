@@ -5,6 +5,8 @@ import './App.css'
 import "tailwindcss";
 import Login from './components/Login';
 import Body from './components/Body';
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore';
 
 function App() {
   
@@ -14,8 +16,9 @@ function App() {
       
    
       <div>
+        <Provider store={appStore}>
+          <Body/></Provider>
         
-        <Body/>
       </div>
      
     </>
